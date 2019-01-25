@@ -15,11 +15,11 @@ public abstract class Car {
 		color = c;
 	}
 
-	public double getEnginePower() {
+	protected double getEnginePower() {
 		return enginePower;
 	}
 
-	public double getCurrentSpeed() {
+	private double getCurrentSpeed() {
 		return currentSpeed;
 	}
 
@@ -35,11 +35,11 @@ public abstract class Car {
 		currentSpeed = 0;
 	}
 
-	public void incrementSpeed(double amount) {
+	private void incrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
 	}
 
-	public void decrementSpeed(double amount) {
+	private void decrementSpeed(double amount) {
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 
