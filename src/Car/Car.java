@@ -10,9 +10,9 @@ public abstract class Car implements Moveable {
 	private String modelName; // The car model name
 
 	int direction;	
-	int x; //riktning
+	int x;
 	int y;
-	
+
 	protected Car(double ep, String m, Color c) {
 		enginePower = ep;
 		modelName = m;
@@ -55,14 +55,19 @@ public abstract class Car implements Moveable {
 		decrementSpeed(amount);
 	}
 
+<<<<<<< HEAD
 	public abstract double speedFactor(); //Den här metoden kallar på speedfaktor i enskild modells 
 	
+=======
+	public abstract double speedFactor();
+
+>>>>>>> 1f1562093ffbda94e1cb605265a814dbffb86162
 	@Override
 	public void move() { //Hämtar vilket håll bilen ska köra 
 		// TODO Auto-generated method stub
-		
+
 		switch(direction) {
-		
+
 		case 0:
 			y+= currentSpeed;
 			break;
@@ -76,7 +81,7 @@ public abstract class Car implements Moveable {
 			x-=currentSpeed;
 			break;
 		}
-		
+
 	}
 
 	@Override
@@ -84,7 +89,7 @@ public abstract class Car implements Moveable {
 		// TODO Auto-generated method stub
 		if(direction < 3) {
 			direction--;
-			}
+		}
 		else direction=0;
 	}
 
@@ -93,7 +98,7 @@ public abstract class Car implements Moveable {
 		// TODO Auto-generated method stub
 		if(direction > 0) {
 			direction++;
-			}
+		}
 		else direction=0;
 	}
 
