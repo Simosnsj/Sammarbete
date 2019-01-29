@@ -19,11 +19,11 @@ public abstract class Car implements Moveable {
 		color = c;
 	}
 
-	protected double getEnginePower() {
+	protected double getEnginePower() { //Hämtar bilens kraft
 		return enginePower;
 	}
 
-	private double getCurrentSpeed() {
+	private double getCurrentSpeed() { //Hämtar bilens hastighet
 		return currentSpeed;
 	}
 
@@ -31,34 +31,34 @@ public abstract class Car implements Moveable {
 		return color;
 	}
 
-	public void startEngine() {
+	public void startEngine() { //Hämtar när bilen ska startas 
 		currentSpeed = 0.1;
 	}
 
-	protected void stopEngine() {
+	protected void stopEngine() { //Hämtar när bilen ska stoppas
 		currentSpeed = 0;
 	}
 
-	private void incrementSpeed(double amount) {
+	private void incrementSpeed(double amount) { //Hämtar att bilens fart ska öka 
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
 	}
 
-	private void decrementSpeed(double amount) {
+	private void decrementSpeed(double amount) { //Hämtar att bilens fart ska minska 
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 
-	public void gas(double amount) {
+	public void gas(double amount) { //Gas kallar på incrementSpeed som ökar farten
 		incrementSpeed(amount);
 	}
 
-	public void brake(double amount) {
+	public void brake(double amount) { //Brake kallar på decrementSpeed som minskar farten
 		decrementSpeed(amount);
 	}
 
-	public abstract double speedFactor();
+	public abstract double speedFactor(); //Den här metoden kallar på speedfaktor i enskild modells 
 	
 	@Override
-	public void move() {
+	public void move() { //Hämtar vilket håll bilen ska köra 
 		// TODO Auto-generated method stub
 		
 		switch(direction) {
@@ -80,7 +80,7 @@ public abstract class Car implements Moveable {
 	}
 
 	@Override
-	public void turnLeft() {
+	public void turnLeft() { //Hämtar att bilen ska köra åt vänster 
 		// TODO Auto-generated method stub
 		if(direction < 3) {
 			direction--;
@@ -89,7 +89,7 @@ public abstract class Car implements Moveable {
 	}
 
 	@Override
-	public void turnRight() {
+	public void turnRight() { //Hämtar att bilem ska köra åt höger
 		// TODO Auto-generated method stub
 		if(direction > 0) {
 			direction++;
