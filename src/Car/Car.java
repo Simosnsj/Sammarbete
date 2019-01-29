@@ -48,11 +48,17 @@ public abstract class Car implements Moveable {
 	}
 
 	public void gas(double amount) { //Gas kallar på incrementSpeed som ökar farten
-		incrementSpeed(amount);
+		if( amount > 1 || amount < 0){
+			return;
+	}
+		else incrementSpeed(amount);
 	}
 
 	public void brake(double amount) { //Brake kallar på decrementSpeed som minskar farten
-		decrementSpeed(amount);
+		if( amount > 1 || amount < 0){
+			return;
+		}
+			else decrementSpeed(amount);
 	}
 
 	public abstract double speedFactor(); //kallar på speedfaktor i enskild modell
