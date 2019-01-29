@@ -40,25 +40,31 @@ public abstract class Car implements Moveable {
 	}
 
 	private void incrementSpeed(double amount) { //ökar bilens fart
-		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+		if( amount <= getEnginePower() || amount >= 0){
+			currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+	}
+		else return;
 	}
 
 	private void decrementSpeed(double amount) { //minskar bilens fart
-		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+		if( amount <= getEnginePower() || amount >= 0){
+			currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+	}
+		else return;
 	}
 
 	public void gas(double amount) { //Gas kallar på incrementSpeed som ökar farten
-		if( amount > 1 || amount < 0){
-			return;
+		if( amount <= 1 || amount >= 0){
+			incrementSpeed(amount);
 	}
-		else incrementSpeed(amount);
+		else return;
 	}
 
 	public void brake(double amount) { //Brake kallar på decrementSpeed som minskar farten
-		if( amount > 1 || amount < 0){
-			return;
+		if( amount < 1 || amount > 0){
+			decrementSpeed(amount);
 		}
-			else decrementSpeed(amount);
+			else return;
 	}
 
 	public abstract double speedFactor(); //kallar på speedfaktor i enskild modell
