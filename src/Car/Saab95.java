@@ -25,4 +25,5 @@ public class Saab95 extends Car {
 			turbo = 1.3;
 		return getEnginePower() * 0.01 * turbo;
 	}
+
 }
