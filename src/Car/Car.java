@@ -55,13 +55,8 @@ public abstract class Car implements Moveable {
 		decrementSpeed(amount);
 	}
 
-<<<<<<< HEAD
 	public abstract double speedFactor(); //Den här metoden kallar på speedfaktor i enskild modells 
 	
-=======
-	public abstract double speedFactor();
-
->>>>>>> 1f1562093ffbda94e1cb605265a814dbffb86162
 	@Override
 	public void move() { //Hämtar vilket håll bilen ska köra 
 		// TODO Auto-generated method stub
