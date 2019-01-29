@@ -9,11 +9,11 @@ public abstract class Car implements Moveable {
 	private Color color; // Color of the car
 	private String modelName; // The car model name
 
-	int direction;	
-	int x;
+	int direction; //bilens riktning, se switch under move
+	int x; //bilens positionering
 	int y;
 
-	protected Car(double ep, String m, Color c) {
+	protected Car(double ep, String m, Color c) { //bilens attributer
 		enginePower = ep;
 		modelName = m;
 		color = c;
@@ -31,19 +31,19 @@ public abstract class Car implements Moveable {
 		return color;
 	}
 
-	public void startEngine() { //Hämtar när bilen ska startas 
+	public void startEngine() { //Startar bilen
 		currentSpeed = 0.1;
 	}
 
-	protected void stopEngine() { //Hämtar när bilen ska stoppas
+	protected void stopEngine() { //stänger av bilen
 		currentSpeed = 0;
 	}
 
-	private void incrementSpeed(double amount) { //Hämtar att bilens fart ska öka 
+	private void incrementSpeed(double amount) { //ökar bilens fart
 		currentSpeed = getCurrentSpeed() + speedFactor() * amount;
 	}
 
-	private void decrementSpeed(double amount) { //Hämtar att bilens fart ska minska 
+	private void decrementSpeed(double amount) { //minskar bilens fart
 		currentSpeed = getCurrentSpeed() - speedFactor() * amount;
 	}
 
@@ -55,10 +55,10 @@ public abstract class Car implements Moveable {
 		decrementSpeed(amount);
 	}
 
-	public abstract double speedFactor(); //Den här metoden kallar på speedfaktor i enskild modells 
+	public abstract double speedFactor(); //kallar på speedfaktor i enskild modell
 	
 	@Override
-	public void move() { //Hämtar vilket håll bilen ska köra 
+	public void move() { //bestämmer rikning som bilen kör i. 
 		// TODO Auto-generated method stub
 
 		switch(direction) {
@@ -80,7 +80,7 @@ public abstract class Car implements Moveable {
 	}
 
 	@Override
-	public void turnLeft() { //Hämtar att bilen ska köra åt vänster 
+	public void turnLeft() { //svänger år vänster 
 		// TODO Auto-generated method stub
 		if(direction < 3) {
 			direction--;
@@ -89,7 +89,7 @@ public abstract class Car implements Moveable {
 	}
 
 	@Override
-	public void turnRight() { //Hämtar att bilem ska köra åt höger
+	public void turnRight() { //svänger år svänster
 		// TODO Auto-generated method stub
 		if(direction > 0) {
 			direction++;
