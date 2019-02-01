@@ -106,7 +106,7 @@ public abstract class Car implements Moveable {
 		if(direction > 0) {
 			direction++;
 		}
-		else direction=0;
+		else direction=3;
 	}
 
 }
