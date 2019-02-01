@@ -1,0 +1,26 @@
+package Car;
+
+import javafx.scene.paint.Color;
+
+public class Scania extends Car {
+	
+	private Flatbed flatbed;
+	
+	
+	public Scania() { //bilens attributer bestämms
+		super(75, "Scania", Color.NAVY); //enginepower, namn, färg
+		stopEngine();//som grund inställning är motorn avstängd
+		flatbed = new Flatbed();
+	}
+	public double speedFactor() {//Speedfactor räknar ut accelerationen. om turbo är på ökar hastigheten
+		double FF = 1;
+		return getEnginePower() * 0.01 * FF;
+	}
+	public void OpenTrunk() {
+
+	}
+	public void CloseTrunk() {
+
+	}
+}
+
