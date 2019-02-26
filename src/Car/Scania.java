@@ -13,6 +13,10 @@ public class Scania extends Car {
 		trunk = new Flatbed();
 	}
 	
+	public void gas(double amount) { //Gas kallar på incrementSpeed som ökar farten
+		if(trunk.trunkDeg == 0)
+			super.gas(amount);
+	}
 	public double speedFactor() {//Speedfactor räknar ut accelerationen. om turbo är på ökar hastigheten
 		double FF = 1;
 		return getEnginePower() * 0.01 * FF;
