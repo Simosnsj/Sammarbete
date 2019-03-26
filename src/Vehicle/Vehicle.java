@@ -12,6 +12,12 @@ public abstract class Vehicle implements Moveable{
 	int direction; //bilens riktning, se switch under move
 	int x; //bilens positionering
 	int y;
+	public int getXpos() {
+		return x;
+	}
+	public int getYpos(){
+		return y;
+	}
 	
 	public Vehicle(double ep, String m, Color c) { //bilens attributer
 		enginePower = ep;
