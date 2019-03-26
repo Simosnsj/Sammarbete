@@ -1,9 +1,9 @@
-package Car;
+package Vehicle;
 
 import javafx.scene.paint.Color;
 
-public abstract class Car implements Moveable {
-
+public abstract class Vehicle implements Moveable{
+	
 	private double enginePower; // Engine power of the car
 	private double currentSpeed; // The current speed of the car
 	private Color color; // Color of the car
@@ -12,13 +12,13 @@ public abstract class Car implements Moveable {
 	int direction; //bilens riktning, se switch under move
 	int x; //bilens positionering
 	int y;
-
-	protected Car(double ep, String m, Color c) { //bilens attributer
+	
+	public Vehicle(double ep, String m, Color c) { //bilens attributer
 		enginePower = ep;
 		modelName = m;
 		color = c;
 	}
-
+	
 	protected double getEnginePower() { //Hämtar bilens kraft
 		return enginePower;
 	}

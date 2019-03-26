@@ -1,4 +1,4 @@
-package Car;
+package Vehicle;
 
 import javafx.scene.paint.Color;
 
