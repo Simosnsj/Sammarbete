@@ -1,4 +1,4 @@
-package Car;
+package Vehicle;
 
 public class Flatbed {
 	

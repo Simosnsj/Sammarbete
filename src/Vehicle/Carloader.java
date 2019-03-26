@@ -1,4 +1,4 @@
-package Car;
+package Vehicle;
 
 import java.util.ArrayList;
 
@@ -28,4 +28,12 @@ public class Carloader { //arraylist med cars för de bilar som kan ha bilar på s
 		return c;
 >>>>>>> 4773c5aa466a69188a6f7cd8bdc8c609b0f686a1
 	}
-}
+	public int GetnumerLoaded() {
+		return Loaded.size();
+	} 
+	/*public void posLock(Car c) {
+		if(Loaded.contains(c)){
+			c.x = 
+		}*/
+	}
+
