@@ -10,11 +10,11 @@ public class Flatbed {
 		}
 		else return true;
 	}
-	public boolean maxOpen() {
+	public boolean maxOpen() { //När backluckan är 70 grader är den öppen 
 		if (trunkDeg == 70.0) return true;
 		else return false;
 	}
-	public boolean maxClosed() {
+	public boolean maxClosed() { //När backluckan är 0 grader är den stängd
 		if (trunkDeg == 0.0) return true;
 		else return false;
 	}
