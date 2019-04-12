@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import model.Vehicle;
-import model.Volvo740;
 import view.ButtonBox;
 import view.CarPane;
 
@@ -23,7 +21,7 @@ public class App extends Application {
 
 		CarController cc = new CarController(cp);
 
-		Vehicle model = new Volvo740();
+		Vehicle.Volvo740 model = new Vehicle.Volvo740();
 		cc.setModel(model);
 
 		ButtonBox cbp = new ButtonBox(cc);

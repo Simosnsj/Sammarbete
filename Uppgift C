@@ -1,0 +1,20 @@
+Uppgift C - analys av kod
+
+Vår cohesion ser bra ut. paketen jobbar inom sitt område.
+M jobbar med bilarna på olika sätt genom metoder och skapar då mycker cohesion där.
+V är ramen för det vi ser och den är helt beroende av update metoder som visar att saker ändras.
+C är input till modellen och är de knappar som finns. Den är i nu läget relativt simpel men har potential att expanderas.
+
+Coupling i vår kod är ganska bra men har plats för förbättringar. Detta kommer lösas när observer och update är helt implementerade.
+
+Ett designmönster som vi följer är M-V-C vilket är en uppdelning av ansvarsområden mellan Modell, View och Controller.
+Genom MVC har vi använt oss av SoC samt SRP eftersom sättet våra bilar tar emot controller. Varje metod har ett syfte och ändrar oftast bara en variabel.
+En annan designprincip vi försöker använda oss av är OCP. Detta använder vi genom att ha flera grund värden och metoder som inte påverkas om ny funktionalitet läggs till.
+Vi använder oss även av ISP eftersom vi har flertal interfaces som bara används till de som behöver dem samt att inga dummy metoder finns i dem.
+DIP efterföljs även eftersom vi t.ex vid skapandet av bilar använder oss av superklasser för att minska antalet classer.
+
+Vi bryter mot ISP i klassen flatbed eftersom denna används till olika typer av fordonstransporter som inte använder samma metoder.
+
+
+MVC som vi försöker använda oss av kommer förstärka implementationen av t.ex Law of Demeter och Separation of Concern. Genom dessa kommer vi även uppnå låg coupling och hög cohesion.
+

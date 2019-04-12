@@ -55,7 +55,8 @@ public abstract class Vehicle implements Moveable{
 	private void decrementSpeed(double amount) { //minskar bilens fart
 		if( amount <= getEnginePower() || amount >= 0){
 			currentSpeed = getCurrentSpeed() - speedFactor() * amount;
-	}
+			if(currentSpeed < 0) {currentSpeed = 0;}
+	} 
 		else return;
 	}
 
