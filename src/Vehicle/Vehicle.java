@@ -12,7 +12,7 @@ public abstract class Vehicle implements Moveable{
 	int direction; //bilens riktning, se switch under move
 	int x; //bilens positionering
 	int y;
-	public int getXpos() {
+	public  int getXpos() {
 		return x;
 	}
 	public int getYpos(){
@@ -25,11 +25,11 @@ public abstract class Vehicle implements Moveable{
 		color = c;
 	}
 	
-	protected double getEnginePower() { //Hämtar bilens kraft
+	public double getEnginePower() { //Hämtar bilens kraft
 		return enginePower;
 	}
 
-	private double getCurrentSpeed() { //Hämtar bilens hastighet
+	public double getCurrentSpeed() { //Hämtar bilens hastighet
 		return currentSpeed;
 	}
 
